@@ -3,11 +3,13 @@ defmodule Prelude.Mixfile do
 
   def project do
     [app: :prelude,
-     version: "0.0.1",
-     elixir: "~> 1.0",
-     build_embedded: Mix.env == :prod,
-     start_permanent: Mix.env == :prod,
-     deps: deps]
+      version: "0.0.1",
+      name: "Elixir Prelude",
+      source_url: "https://github.com/houshuang/elixir-prelude",
+      elixir: "~> 1.0",
+      build_embedded: Mix.env == :prod,
+      start_permanent: Mix.env == :prod,
+      deps: deps]
   end
 
   # Configuration for the OTP application
@@ -27,6 +29,9 @@ defmodule Prelude.Mixfile do
   #
   # Type `mix help deps` for more examples and options
   defp deps do
-    []
+    [
+      {:earmark, "~> 0.1", only: :dev},
+      {:ex_doc, "~> 0.8", only: :dev}
+    ]
   end
 end
