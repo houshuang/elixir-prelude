@@ -27,4 +27,13 @@ defmodule Prelude.String do
     end
   end
 
+  @doc "Returns the first code point in the string, or `nil` if str is empty"
+  def head(""), do: nil
+  def head(str), do: elem(String.next_codepoint(str), 0)
+
+  @doc "Chops off the first codepoint, and returns the rest of the string.
+
+  Returns an empty string if `String.length(str) == 1`, and `nil` if string is empty."
+  def tail(""), do: nil
+  def tail(str), do: elem(String.next_codepoint(str), 1)
 end
