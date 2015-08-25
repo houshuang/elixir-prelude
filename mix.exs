@@ -3,7 +3,7 @@ defmodule Prelude.Mixfile do
 
   def project do
     [app: :prelude,
-      version: "0.0.1",
+      version: "0.0.2",
       name: "Elixir Prelude",
       source_url: "https://github.com/houshuang/elixir-prelude",
       elixir: "~> 1.0",
